@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SNS・メディアで話題の商品｜SNSバズトップランキング</title>
-<meta name="description" content="TikTok・Instagram・YouTube・テレビで話題の商品を楽天市場から毎日ピックアップ。">
+<meta name="description" content="TikTok・Instagram・YouTube・テレビで話題のバズり商品を毎日ピックアップ。">
 <link rel="canonical" href="https://sns-buzz-ranking.github.io/sns.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SNSバズトップランキング">
 <meta property="og:title" content="SNS・メディアで話題の商品">
-<meta property="og:description" content="TikTok・Instagram・YouTube・テレビで話題の商品を楽天市場から毎日ピックアップ。">
+<meta property="og:description" content="TikTok・Instagram・YouTube・テレビで話題のバズり商品を毎日ピックアップ。">
 <meta property="og:url" content="https://sns-buzz-ranking.github.io/sns.html">
 <meta property="og:image" content="https://thumbnail.image.rakuten.co.jp/@0_mall/q1st-darma/cabinet/thumb/normal/imgrc0202402891.jpg?_ex=300x300">
 <meta name="twitter:card" content="summary_large_image">
@@ -77,8 +77,11 @@ padding:40px 32px;min-height:280px;display:flex;flex-direction:column;justify-co
 .hero .imgs span:nth-child(3){transform:rotate(6deg) translateY(8px)}
 .hero .imgs span:hover:nth-child(n){transform:scale(1.06)}
 .hero .hand{position:absolute;right:30px;top:12px;font-size:20px;color:#ffe066;transform:rotate(-6deg)}
-.intro-c{text-align:center;max-width:760px;margin:26px auto 0;font-size:14px;line-height:1.9}
-.intro-c h1{font-size:22px;font-weight:700;margin-bottom:12px;letter-spacing:.04em}
+.intro-c{text-align:center;max-width:760px;margin:26px auto 0;font-size:14px;line-height:2;background:var(--pink-l);border-radius:16px;padding:26px 28px 28px;position:relative}
+.intro-c:before{content:"About";font-family:'Dancing Script',cursive;font-size:24px;color:var(--pink);display:block;line-height:1;margin-bottom:6px}
+.intro-c h1{font-size:22px;font-weight:700;margin-bottom:12px;letter-spacing:.04em;display:inline-block;background:linear-gradient(transparent 62%,#ffe58f 62%);padding:0 6px}
+.intro-c p{text-wrap:balance;margin:0 auto;max-width:640px}
+.intro-c .btn-pink{border-radius:30px}
 .btn-pink{display:inline-flex;align-items:center;justify-content:center;gap:24px;background:var(--pink);color:#fff;font-weight:700;font-size:15px;
 padding:12px 40px;min-width:240px;margin-top:16px;letter-spacing:.06em}
 .btn-pink:after{content:"⟶";font-size:20px;font-weight:300}
@@ -88,6 +91,11 @@ padding:12px 40px;min-width:240px;margin-top:16px;letter-spacing:.06em}
 .sec .en{font-size:30px;color:#333;line-height:1;display:block}
 .sec .ja{font-size:17px;font-weight:700;margin-top:4px;display:block}
 .sec .sub{font-size:12px;color:var(--sub);margin-top:4px;display:block}
+.sec.big .en{font-size:34px}
+.sec.big .en.first{font-size:40px;color:#ff0033;margin-bottom:2px}
+.sec.big .en.first.rk{color:#bf0000}
+.sec.big .ja{font-size:22px;margin-top:8px;display:inline-block;background:linear-gradient(transparent 60%,#fff3a0 60%);padding:0 10px}
+.sec.big .sub{margin-top:8px}
 .more{display:block;text-align:center;margin:18px auto 0;font-size:13px;font-weight:700;color:var(--pink);border:1px solid var(--pink);width:260px;max-width:100%;padding:9px}
 .more:hover{background:var(--pink);color:#fff}
 /* 番号丸つきカード（横スクロール・ランキング） */
@@ -184,6 +192,13 @@ footer .links a:hover{color:var(--pink)}
 .pbtn{display:inline-block;margin-top:10px;background:var(--pink);color:#fff;font-weight:700;font-size:14px;padding:9px 26px}
 .pbtn:hover{background:var(--pink-d)}
 .pbtn.s{font-size:13px;padding:7px 16px;margin-top:6px}
+.pbtns{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center}
+.pbtn.y{background:#ff0033}
+.pbtn.y:hover{background:#d4002a}
+.pbtn.y.s{background:#fff;color:#ff0033;border:1px solid #ff0033}
+.spec{border-collapse:collapse;font-size:12.5px;margin:10px 0 4px;width:100%;max-width:420px}
+.spec th{background:var(--gray);font-weight:700;text-align:left;padding:5px 10px;border:1px solid var(--line);width:34%;white-space:nowrap}
+.spec td{padding:5px 10px;border:1px solid var(--line)}
 .gf,.ca{font-size:13px;line-height:1.7;padding:6px 10px;margin:6px 0}
 .gf{background:#eef8f0} .ca{background:#fff7e6}
 .gf b,.ca b{display:inline-block;font-size:11px;padding:0 6px;margin-right:6px;color:#fff}
@@ -238,6 +253,7 @@ table.cmp td.pr2{font-weight:700;color:var(--pink);white-space:nowrap}
   .rail .ncard{flex-basis:150px}
   .pitem-in{flex-direction:column} .pthumb{width:100%;max-width:220px;margin:0 auto}
   .pbtn{display:block;text-align:center}
+  .pbtns{flex-direction:column;align-items:stretch}
   .article h1{font-size:20px}
   .topbar .r{display:none}
   .topbar span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -258,14 +274,14 @@ table.cmp td.pr2{font-weight:700;color:var(--pink);white-space:nowrap}
 <div class="r"><a href="about.html">› このサイトについて</a><a href="blog/index.html">› ブログ</a></div></div></div>
 <div class="header"><div class="in">
   <a class="logo" href="index.html">SNSバズトップランキング<small>楽天・Yahoo!の売れ筋・SNSで話題の商品を毎日更新</small></a>
-  <span class="upd">更新 08/17 23:11</span>
+  <span class="upd">更新 08/17 23:55</span>
   <label for="menu" class="burger" aria-label="メニュー">☰</label>
 </div></div>
-<div class="mrow"><a href="index.html"><span class="ic">🏆</span>総合ランキング</a><a href="sns.html" class=on><span class="ic">📱</span>SNSで人気</a><a href="yahoo.html"><span class="ic">🛍️</span>Yahoo!で人気</a><a href="trend.html"><span class="ic">💬</span>今話題</a><a href="rise.html"><span class="ic">🔥</span>急上昇</a><a href="blog/index.html"><span class="ic">📝</span>ブログ</a></div>
+<div class="mrow"><a href="index.html"><span class="ic">🏆</span>楽天で人気</a><a href="yahoo.html"><span class="ic">🛍️</span>Yahoo!で人気</a><a href="sns.html" class=on><span class="ic">📱</span>SNSで人気</a><a href="trend.html"><span class="ic">💬</span>今話題</a><a href="rise.html"><span class="ic">🔥</span>急上昇</a><a href="blog/index.html"><span class="ic">📝</span>ブログ</a></div>
 
 <div class="layout">
-  <aside class="side"><div class="cap"><span class="en">Menu</span>メニュー</div><div class="box"><a href="index.html"><span class="ic">🏆</span>総合ランキング</a><a href="sns.html" class="on"><span class="ic">📱</span>SNSで人気</a><a href="yahoo.html"><span class="ic">🛍️</span>Yahoo!で人気</a><a href="trend.html"><span class="ic">💬</span>今話題</a><a href="rise.html"><span class="ic">🔥</span>急上昇</a><a href="blog/index.html"><span class="ic">📝</span>ブログ</a></div><div class="cap"><span class="en">Category</span>ジャンル別</div><div class="box"><a href="genre/100371.html"><span class="ic">👗</span>レディースファッション</a><a href="genre/551177.html"><span class="ic">👔</span>メンズファッション</a><a href="genre/100433.html"><span class="ic">🧦</span>インナー・下着・ナイトウェア</a><a href="genre/216131.html"><span class="ic">👜</span>バッグ・小物・ブランド雑貨</a><a href="genre/558885.html"><span class="ic">👟</span>靴</a><a href="genre/558929.html"><span class="ic">⌚</span>腕時計</a><a href="genre/216129.html"><span class="ic">💍</span>ジュエリー・アクセサリー</a><a href="genre/100533.html"><span class="ic">🧸</span>キッズ・ベビー・マタニティ</a><a href="genre/566382.html"><span class="ic">🪀</span>おもちゃ</a><a href="genre/101070.html"><span class="ic">⚽</span>スポーツ・アウトドア</a><a href="genre/562637.html"><span class="ic">🔌</span>家電</a><a href="genre/211742.html"><span class="ic">📷</span>TV・オーディオ・カメラ</a><a href="genre/100026.html"><span class="ic">💻</span>パソコン・周辺機器</a><a href="genre/564500.html"><span class="ic">📱</span>スマートフォン・タブレット</a><a href="genre/565004.html"><span class="ic">📶</span>光回線・モバイル通信</a><a href="genre/100227.html"><span class="ic">🍱</span>食品</a><a href="genre/551167.html"><span class="ic">🍰</span>スイーツ・お菓子</a><a href="genre/100316.html"><span class="ic">🥤</span>水・ソフトドリンク</a><a href="genre/510915.html"><span class="ic">🍺</span>ビール・洋酒</a><a href="genre/510901.html"><span class="ic">📚</span>日本酒・焼酎</a><a href="genre/100804.html"><span class="ic">🛋️</span>インテリア・寝具・収納</a><a href="genre/215783.html"><span class="ic">🧻</span>日用品雑貨・文房具・手芸</a><a href="genre/558944.html"><span class="ic">🍳</span>キッチン用品・食器・調理器具</a><a href="genre/200162.html"><span class="ic">📚</span>本・雑誌・コミック</a><a href="genre/101240.html"><span class="ic">💿</span>CD・DVD</a><a href="genre/101205.html"><span class="ic">🎮</span>テレビゲーム</a><a href="genre/101164.html"><span class="ic">🎨</span>ホビー</a><a href="genre/112493.html"><span class="ic">🎸</span>楽器・音響機器</a><a href="genre/101114.html"><span class="ic">🚗</span>車・バイク</a><a href="genre/503190.html"><span class="ic">🚗</span>車用品・バイク用品</a></div><div class="box"><a href="about.html"><span class="ic">ℹ️</span>このサイトについて</a></div></aside>
-  <div class="content"><div class="prnote">PR：アフィリエイト広告を利用しています</div><div class="crumb"><a href="index.html">HOME</a> › SNSで人気</div><div class="pagehead"><h1>SNS・メディアで話題の商品</h1><p>TikTok・Instagram・YouTube・テレビで紹介されて人気の商品を集めました。楽天市場でショップが「〇〇で話題」と紹介している商品を、毎日ピックアップしています。「みんなが見てるあの商品」をいち早くチェックしませんか？</p></div><div class="sec"><span class="en">Ranking</span><span class="ja">TikTokで話題の商品</span></div><div class="grid4">
+  <aside class="side"><div class="cap"><span class="en">Menu</span>メニュー</div><div class="box"><a href="index.html"><span class="ic">🏆</span>楽天で人気</a><a href="yahoo.html"><span class="ic">🛍️</span>Yahoo!で人気</a><a href="sns.html" class="on"><span class="ic">📱</span>SNSで人気</a><a href="trend.html"><span class="ic">💬</span>今話題</a><a href="rise.html"><span class="ic">🔥</span>急上昇</a><a href="blog/index.html"><span class="ic">📝</span>ブログ</a></div><div class="cap"><span class="en">Category</span>楽天 ジャンル別</div><div class="box"><a href="genre/100371.html"><span class="ic">👗</span>レディースファッション</a><a href="genre/551177.html"><span class="ic">👔</span>メンズファッション</a><a href="genre/100433.html"><span class="ic">🧦</span>インナー・下着・ナイトウェア</a><a href="genre/216131.html"><span class="ic">👜</span>バッグ・小物・ブランド雑貨</a><a href="genre/558885.html"><span class="ic">👟</span>靴</a><a href="genre/558929.html"><span class="ic">⌚</span>腕時計</a><a href="genre/216129.html"><span class="ic">💍</span>ジュエリー・アクセサリー</a><a href="genre/100533.html"><span class="ic">🧸</span>キッズ・ベビー・マタニティ</a><a href="genre/566382.html"><span class="ic">🪀</span>おもちゃ</a><a href="genre/101070.html"><span class="ic">⚽</span>スポーツ・アウトドア</a><a href="genre/562637.html"><span class="ic">🔌</span>家電</a><a href="genre/211742.html"><span class="ic">📷</span>TV・オーディオ・カメラ</a><a href="genre/100026.html"><span class="ic">💻</span>パソコン・周辺機器</a><a href="genre/564500.html"><span class="ic">📱</span>スマートフォン・タブレット</a><a href="genre/565004.html"><span class="ic">📶</span>光回線・モバイル通信</a><a href="genre/100227.html"><span class="ic">🍱</span>食品</a><a href="genre/551167.html"><span class="ic">🍰</span>スイーツ・お菓子</a><a href="genre/100316.html"><span class="ic">🥤</span>水・ソフトドリンク</a><a href="genre/510915.html"><span class="ic">🍺</span>ビール・洋酒</a><a href="genre/510901.html"><span class="ic">📚</span>日本酒・焼酎</a><a href="genre/100804.html"><span class="ic">🛋️</span>インテリア・寝具・収納</a><a href="genre/215783.html"><span class="ic">🧻</span>日用品雑貨・文房具・手芸</a><a href="genre/558944.html"><span class="ic">🍳</span>キッチン用品・食器・調理器具</a><a href="genre/200162.html"><span class="ic">📚</span>本・雑誌・コミック</a><a href="genre/101240.html"><span class="ic">💿</span>CD・DVD</a><a href="genre/101205.html"><span class="ic">🎮</span>テレビゲーム</a><a href="genre/101164.html"><span class="ic">🎨</span>ホビー</a><a href="genre/112493.html"><span class="ic">🎸</span>楽器・音響機器</a><a href="genre/101114.html"><span class="ic">🚗</span>車・バイク</a><a href="genre/503190.html"><span class="ic">🚗</span>車用品・バイク用品</a></div><div class="box"><a href="about.html"><span class="ic">ℹ️</span>このサイトについて</a></div></aside>
+  <div class="content"><div class="prnote">PR：アフィリエイト広告を利用しています</div><div class="crumb"><a href="index.html">HOME</a> › SNSで人気</div><div class="pagehead"><h1>SNS・メディアで話題の商品</h1><p>TikTok・Instagram・YouTube・テレビで紹介されて人気の商品を集めました。通販モールでショップが「〇〇で話題」と紹介している商品を、毎日ピックアップしています。「みんなが見てるあの商品」をいち早くチェックしませんか？</p></div><div class="sec"><span class="en">Ranking</span><span class="ja">TikTokで話題の商品</span></div><div class="grid4">
 <a class="ccard" href="https://hb.afl.rakuten.co.jp/hgc/g00uieko.1ae4t726.g00uieko.1ae4u17f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fq1st-darma%2F10000143-3set%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fq1st-darma%2Fi%2F10000005%2F&amp;rafcid=wsc_i_is_7a5a7ee1-eab7-4242-84f1-094cbd9b851d" target="_blank" rel="nofollow sponsored noopener">
   <div class="crown"><svg viewBox="0 0 24 20" aria-hidden="true"><path fill="#e0b100" d="M2 6l5 4 5-8 5 8 5-4-2 12H4z"/><rect x="4" y="17" width="16" height="2.5" fill="#e0b100"/></svg></div><div class="img"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/q1st-darma/cabinet/thumb/normal/imgrc0202402891.jpg?_ex=300x300" alt="【公式限定特典付】【21枚入】 シートマスク ダーマレーザー 個包装 レチノール VC ビタミンC ティーツリー ナイア" loading="lazy"></div>
   <span class="ribbon">TikTokで話題</span>
@@ -550,13 +566,13 @@ table.cmp td.pr2{font-weight:700;color:var(--pink);white-space:nowrap}
 </a></div></div>
 </div>
 <footer><div class="in">
-  <div class="links"><a href="index.html">総合ランキング</a><a href="sns.html">SNSで人気</a><a href="yahoo.html">Yahoo!で人気</a><a href="trend.html">今話題</a><a href="rise.html">急上昇</a><a href="blog/index.html">ブログ</a><a href="about.html">このサイトについて</a></div>
+  <div class="links"><a href="index.html">楽天で人気</a><a href="yahoo.html">Yahoo!で人気</a><a href="sns.html">SNSで人気</a><a href="trend.html">今話題</a><a href="rise.html">急上昇</a><a href="blog/index.html">ブログ</a><a href="about.html">このサイトについて</a></div>
   掲載情報は楽天市場・Yahoo!ショッピングの公式ランキングデータをもとに毎日更新しています。価格・在庫・ポイント倍率は変動しますので、最新情報は各商品ページでご確認ください。<br>
   当サイトは楽天アフィリエイト等のアフィリエイトプログラムに参加しており、リンク経由でお買い物いただくと当サイトに紹介料が入ることがあります（購入者の負担が増えることはありません）。<br>
   <a href="https://developers.rakuten.com/" target="_blank">Supported by Rakuten Developers</a>　<a href="https://developer.yahoo.co.jp/sitemap/" target="_blank">Webサービス by Yahoo! JAPAN</a><br>
-  最終更新: 2026年08月17日 23:11　&copy; 2026 SNSバズトップランキング
+  最終更新: 2026年08月17日 23:55　&copy; 2026 SNSバズトップランキング
 </div></footer>
 <label for="menu" class="overlay"></label>
-<nav class="drawer"><label for="menu" class="close">×</label><div class="cap"><span class="en">Menu</span>メニュー</div><div class="box"><a href="index.html"><span class="ic">🏆</span>総合ランキング</a><a href="sns.html" class="on"><span class="ic">📱</span>SNSで人気</a><a href="yahoo.html"><span class="ic">🛍️</span>Yahoo!で人気</a><a href="trend.html"><span class="ic">💬</span>今話題</a><a href="rise.html"><span class="ic">🔥</span>急上昇</a><a href="blog/index.html"><span class="ic">📝</span>ブログ</a></div><div class="cap"><span class="en">Category</span>ジャンル別</div><div class="box"><a href="genre/100371.html"><span class="ic">👗</span>レディースファッション</a><a href="genre/551177.html"><span class="ic">👔</span>メンズファッション</a><a href="genre/100433.html"><span class="ic">🧦</span>インナー・下着・ナイトウェア</a><a href="genre/216131.html"><span class="ic">👜</span>バッグ・小物・ブランド雑貨</a><a href="genre/558885.html"><span class="ic">👟</span>靴</a><a href="genre/558929.html"><span class="ic">⌚</span>腕時計</a><a href="genre/216129.html"><span class="ic">💍</span>ジュエリー・アクセサリー</a><a href="genre/100533.html"><span class="ic">🧸</span>キッズ・ベビー・マタニティ</a><a href="genre/566382.html"><span class="ic">🪀</span>おもちゃ</a><a href="genre/101070.html"><span class="ic">⚽</span>スポーツ・アウトドア</a><a href="genre/562637.html"><span class="ic">🔌</span>家電</a><a href="genre/211742.html"><span class="ic">📷</span>TV・オーディオ・カメラ</a><a href="genre/100026.html"><span class="ic">💻</span>パソコン・周辺機器</a><a href="genre/564500.html"><span class="ic">📱</span>スマートフォン・タブレット</a><a href="genre/565004.html"><span class="ic">📶</span>光回線・モバイル通信</a><a href="genre/100227.html"><span class="ic">🍱</span>食品</a><a href="genre/551167.html"><span class="ic">🍰</span>スイーツ・お菓子</a><a href="genre/100316.html"><span class="ic">🥤</span>水・ソフトドリンク</a><a href="genre/510915.html"><span class="ic">🍺</span>ビール・洋酒</a><a href="genre/510901.html"><span class="ic">📚</span>日本酒・焼酎</a><a href="genre/100804.html"><span class="ic">🛋️</span>インテリア・寝具・収納</a><a href="genre/215783.html"><span class="ic">🧻</span>日用品雑貨・文房具・手芸</a><a href="genre/558944.html"><span class="ic">🍳</span>キッチン用品・食器・調理器具</a><a href="genre/200162.html"><span class="ic">📚</span>本・雑誌・コミック</a><a href="genre/101240.html"><span class="ic">💿</span>CD・DVD</a><a href="genre/101205.html"><span class="ic">🎮</span>テレビゲーム</a><a href="genre/101164.html"><span class="ic">🎨</span>ホビー</a><a href="genre/112493.html"><span class="ic">🎸</span>楽器・音響機器</a><a href="genre/101114.html"><span class="ic">🚗</span>車・バイク</a><a href="genre/503190.html"><span class="ic">🚗</span>車用品・バイク用品</a></div><div class="box"><a href="about.html"><span class="ic">ℹ️</span>このサイトについて</a></div></nav>
+<nav class="drawer"><label for="menu" class="close">×</label><div class="cap"><span class="en">Menu</span>メニュー</div><div class="box"><a href="index.html"><span class="ic">🏆</span>楽天で人気</a><a href="yahoo.html"><span class="ic">🛍️</span>Yahoo!で人気</a><a href="sns.html" class="on"><span class="ic">📱</span>SNSで人気</a><a href="trend.html"><span class="ic">💬</span>今話題</a><a href="rise.html"><span class="ic">🔥</span>急上昇</a><a href="blog/index.html"><span class="ic">📝</span>ブログ</a></div><div class="cap"><span class="en">Category</span>楽天 ジャンル別</div><div class="box"><a href="genre/100371.html"><span class="ic">👗</span>レディースファッション</a><a href="genre/551177.html"><span class="ic">👔</span>メンズファッション</a><a href="genre/100433.html"><span class="ic">🧦</span>インナー・下着・ナイトウェア</a><a href="genre/216131.html"><span class="ic">👜</span>バッグ・小物・ブランド雑貨</a><a href="genre/558885.html"><span class="ic">👟</span>靴</a><a href="genre/558929.html"><span class="ic">⌚</span>腕時計</a><a href="genre/216129.html"><span class="ic">💍</span>ジュエリー・アクセサリー</a><a href="genre/100533.html"><span class="ic">🧸</span>キッズ・ベビー・マタニティ</a><a href="genre/566382.html"><span class="ic">🪀</span>おもちゃ</a><a href="genre/101070.html"><span class="ic">⚽</span>スポーツ・アウトドア</a><a href="genre/562637.html"><span class="ic">🔌</span>家電</a><a href="genre/211742.html"><span class="ic">📷</span>TV・オーディオ・カメラ</a><a href="genre/100026.html"><span class="ic">💻</span>パソコン・周辺機器</a><a href="genre/564500.html"><span class="ic">📱</span>スマートフォン・タブレット</a><a href="genre/565004.html"><span class="ic">📶</span>光回線・モバイル通信</a><a href="genre/100227.html"><span class="ic">🍱</span>食品</a><a href="genre/551167.html"><span class="ic">🍰</span>スイーツ・お菓子</a><a href="genre/100316.html"><span class="ic">🥤</span>水・ソフトドリンク</a><a href="genre/510915.html"><span class="ic">🍺</span>ビール・洋酒</a><a href="genre/510901.html"><span class="ic">📚</span>日本酒・焼酎</a><a href="genre/100804.html"><span class="ic">🛋️</span>インテリア・寝具・収納</a><a href="genre/215783.html"><span class="ic">🧻</span>日用品雑貨・文房具・手芸</a><a href="genre/558944.html"><span class="ic">🍳</span>キッチン用品・食器・調理器具</a><a href="genre/200162.html"><span class="ic">📚</span>本・雑誌・コミック</a><a href="genre/101240.html"><span class="ic">💿</span>CD・DVD</a><a href="genre/101205.html"><span class="ic">🎮</span>テレビゲーム</a><a href="genre/101164.html"><span class="ic">🎨</span>ホビー</a><a href="genre/112493.html"><span class="ic">🎸</span>楽器・音響機器</a><a href="genre/101114.html"><span class="ic">🚗</span>車・バイク</a><a href="genre/503190.html"><span class="ic">🚗</span>車用品・バイク用品</a></div><div class="box"><a href="about.html"><span class="ic">ℹ️</span>このサイトについて</a></div></nav>
 </body>
 </html>
