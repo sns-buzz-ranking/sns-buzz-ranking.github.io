@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sns-buzz-ranking.github.io/sitemap.xml
